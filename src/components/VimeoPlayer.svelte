@@ -11,6 +11,7 @@
   export let videoId;
   export let loop = false;
   export let autoplay = false;
+  export let elementKey = "key";
 
   const dispatch = createEventDispatcher();
   const eventsToDispatch = [
@@ -28,7 +29,7 @@
     'loaded'
   ]
   let playerId = parseInt(Math.random() * 100000).toString();
-  let elementId = `vimeo-player-${videoId}`;
+  let elementId = `vimeo-player-${videoId}-${elementKey}`;
   let vimeo
   export let player;
 
